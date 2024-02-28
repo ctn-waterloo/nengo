@@ -5,15 +5,11 @@ requires = ["setuptools<64", "wheel"]
 
 [tool.black]
 target-version = ['py38']
-force_exclude = '''
-(
-    _vendor/
-)
-'''
 
 [tool.isort]
 profile = "black"
 src_paths = ["nengo"]
+skip_gitignore = true
 
 [tool.docformatter]
 wrap-summaries = 88
